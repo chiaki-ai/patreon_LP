@@ -1,0 +1,346 @@
+/* Responsive Design */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--space-xl);
+    }
+    
+    .hero-title {
+        font-size: var(--text-4xl);
+    }
+    
+    .section-title {
+        font-size: var(--text-3xl);
+    }
+    
+    .story-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+    
+    .hero-video-element {
+        width: 320px;
+        height: 240px;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+        padding: 0 10px;
+    }
+    
+    .benefit-card {
+        padding: var(--space-lg);
+    }
+    
+    .benefit-image {
+        height: 200px;
+        margin-bottom: var(--space-md);
+    }
+    
+    .benefit-card h3 {
+        font-size: var(--text-lg);
+        margin-bottom: 0.8rem;
+    }
+    
+    .benefit-card p {
+        font-size: var(--text-sm);
+        line-height: 1.5;
+    }
+    
+    .stats {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .steps {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Mobile CTA button optimization */
+    .hero-cta-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    
+    .cta-button {
+        min-height: 48px;
+        padding: var(--space-lg) var(--space-2xl);
+        font-size: var(--text-base);
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+    
+    /* Mobile card touch optimization */
+    .pricing-card,
+    .benefit-card {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+    
+    /* Disable hover effects on touch devices */
+    @media (hover: none) and (pointer: coarse) {
+        .pricing-card:hover,
+        .benefit-card:hover,
+        .cta-button:hover {
+            transform: none;
+            box-shadow: initial;
+        }
+        
+        .pricing-card.featured:hover {
+            transform: none;
+        }
+    }
+    
+    .hero-stats {
+        justify-content: center;
+        gap: var(--space-sm);
+    }
+    
+    .stat-item {
+        font-size: var(--text-xs);
+        padding: 6px 12px;
+    }
+    
+    .free-trial-badge {
+        font-size: var(--text-sm);
+        padding: 8px 20px;
+    }
+    
+    /* Pricing section mobile optimization */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+        padding: 0 10px;
+    }
+    
+    .pricing-card {
+        margin: 0;
+        transform: none !important;
+    }
+    
+    .pricing-card.featured {
+        transform: none !important;
+        order: -1; /* Featured plan at top */
+    }
+    
+    .pricing-card.featured:hover {
+        transform: translateY(-2px) !important;
+    }
+    
+    .tier-price {
+        font-size: var(--text-3xl);
+    }
+    
+    .tier-price .price {
+        font-size: var(--text-3xl);
+    }
+    
+    .tier-features {
+        font-size: var(--text-sm);
+    }
+    
+    .tier-features li {
+        padding: 0.4rem 0;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .hero {
+        padding: var(--space-xl) 0;
+    }
+    
+    .hero-title {
+        font-size: var(--text-3xl);
+    }
+    
+    .hero-video-element {
+        width: 280px;
+        height: 210px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .final-cta h2 {
+        font-size: var(--text-3xl);
+    }
+    
+    /* Small screen pricing card optimization */
+    .pricing-card {
+        padding: var(--space-lg);
+        margin: 0 5px;
+    }
+    
+    .tier-name {
+        font-size: var(--text-lg);
+    }
+    
+    .tier-price .price {
+        font-size: var(--text-3xl);
+    }
+    
+    .tier-price .period {
+        font-size: var(--text-sm);
+    }
+    
+    .tier-features {
+        font-size: var(--text-xs);
+    }
+    
+    .popular-badge {
+        font-size: var(--text-xs);
+        padding: 4px 15px;
+    }
+    
+    /* Small screen benefit card optimization */
+    .benefit-card {
+        padding: 1.2rem;
+        margin: 0 5px;
+    }
+    
+    .benefit-image {
+        height: 180px;
+    }
+    
+    .benefit-card h3 {
+        font-size: var(--text-base);
+    }
+    
+    .benefit-card p {
+        font-size: var(--text-xs);
+    }
+    
+    .section-title {
+        font-size: var(--text-2xl);
+        padding: 0 10px;
+    }
+    
+    .section-subtitle {
+        font-size: var(--text-base);
+        padding: 0 10px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .hero-title {
+        font-size: var(--text-6xl);
+    }
+    
+    .section-title {
+        font-size: var(--text-5xl);
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .hero-video-element {
+        width: 500px;
+        height: 375px;
+    }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-content {
+        gap: var(--space-4xl);
+    }
+}
+
+/* Print styles */
+@media print {
+    .hero-video,
+    .cta-button,
+    .share-buttons {
+        display: none;
+    }
+    
+    .hero {
+        background: white;
+        color: black;
+        min-height: auto;
+        padding: var(--space-xl) 0;
+    }
+    
+    .hero-text {
+        color: black;
+    }
+    
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .hero {
+        animation: none;
+    }
+    
+    .cta-button.pulse {
+        animation: none;
+    }
+    
+    .free-trial-badge {
+        animation: none;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .hero-badge,
+    .free-trial-badge,
+    .stat-item {
+        border: 2px solid currentColor;
+    }
+    
+    .cta-button {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .benefit-card,
+    .pricing-card,
+    .card {
+        background: var(--bg-dark);
+        color: var(--text-white);
+        border: 1px solid #444;
+    }
+    
+    .tier-name,
+    .benefit-card h3 {
+        color: var(--text-white);
+    }
+    
+    .tier-features li,
+    .benefit-card p {
+        color: #ccc;
+    }
+}

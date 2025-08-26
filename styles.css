@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
@@ -90,6 +94,24 @@ h1, h2, h3 {
     z-index: 2;
 }
 
+.hero-video {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.hero-video-element {
+    width: 400px;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    max-width: 100%;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
 .hero-image {
     position: relative;
     text-align: center;
@@ -157,9 +179,31 @@ h1, h2, h3 {
     border-radius: 25px;
     font-size: 0.9rem;
     font-weight: 500;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.free-trial-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+    }
+    to {
+        box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+    }
 }
 
 .hero-stats {
@@ -209,6 +253,34 @@ h1, h2, h3 {
 
 .cta-button.pulse {
     animation: pulse 2s infinite;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.cta-button.outline {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: white;
+}
+
+.cta-button.outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+    transform: translateY(-2px);
+}
+
+.hero-guarantee {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 1rem;
+    font-weight: 500;
 }
 
 @keyframes pulse {
@@ -524,6 +596,50 @@ h1, h2, h3 {
     background: rgba(255, 255, 255, 0.2);
     padding: 2px 8px;
     border-radius: 5px;
+    font-weight: 600;
+}
+
+.content-warning {
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(255, 142, 142, 0.1) 100%);
+    border: 2px solid rgba(255, 107, 107, 0.3);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 3rem 0;
+    backdrop-filter: blur(10px);
+}
+
+.warning-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 107, 107, 0.2);
+}
+
+.warning-icon {
+    font-size: 1.5rem;
+}
+
+.warning-header h3 {
+    color: #d63384;
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.warning-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #495057;
+}
+
+.warning-content p:last-child {
+    margin-bottom: 0;
+}
+
+.warning-content strong {
+    color: #d63384;
     font-weight: 600;
 }
 
@@ -1054,6 +1170,11 @@ h1, h2, h3 {
         gap: 2rem;
     }
     
+    .hero-video-element {
+        width: 320px;
+        height: 240px;
+    }
+    
     .profile-image {
         width: 300px;
         height: 300px;
@@ -1061,6 +1182,27 @@ h1, h2, h3 {
     
     .benefits-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 10px;
+    }
+    
+    .benefit-card {
+        padding: 1.5rem;
+    }
+    
+    .benefit-image {
+        height: 200px;
+        margin-bottom: 1rem;
+    }
+    
+    .benefit-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .benefit-card p {
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
     
     .stats {
@@ -1071,6 +1213,97 @@ h1, h2, h3 {
     .steps {
         grid-template-columns: 1fr;
     }
+    
+    /* モバイル向けCTAボタン最適化 */
+    .hero-cta-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    
+    .cta-button {
+        min-height: 48px;
+        padding: 15px 25px;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+    
+    /* モバイル向けカードタッチ操作 */
+    .pricing-card,
+    .benefit-card {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+    
+    /* モバイルでのホバー効果を無効化 */
+    @media (hover: none) and (pointer: coarse) {
+        .pricing-card:hover,
+        .benefit-card:hover,
+        .cta-button:hover {
+            transform: none;
+            box-shadow: initial;
+        }
+        
+        .pricing-card.featured:hover {
+            transform: none;
+        }
+    }
+    
+    .hero-stats {
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .stat-item {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    
+    .free-trial-badge {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+    
+    /* 価格セクションのモバイル最適化 */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 10px;
+    }
+    
+    .pricing-card {
+        margin: 0;
+        transform: none !important;
+    }
+    
+    .pricing-card.featured {
+        transform: none !important;
+        order: -1; /* 推奨プランを最上位に */
+    }
+    
+    .pricing-card.featured:hover {
+        transform: translateY(-2px) !important;
+    }
+    
+    .tier-price {
+        font-size: 2rem;
+    }
+    
+    .tier-price .price {
+        font-size: 2.2rem;
+    }
+    
+    .tier-features {
+        font-size: 0.9rem;
+    }
+    
+    .tier-features li {
+        padding: 0.4rem 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1080,6 +1313,11 @@ h1, h2, h3 {
     
     .hero-title {
         font-size: 2rem;
+    }
+    
+    .hero-video-element {
+        width: 280px;
+        height: 210px;
     }
     
     .profile-image {
@@ -1093,5 +1331,60 @@ h1, h2, h3 {
     
     .final-cta h2 {
         font-size: 2rem;
+    }
+    
+    /* 小画面向け価格カード最適化 */
+    .pricing-card {
+        padding: 1.5rem;
+        margin: 0 5px;
+    }
+    
+    .tier-name {
+        font-size: 1.1rem;
+    }
+    
+    .tier-price .price {
+        font-size: 2rem;
+    }
+    
+    .tier-price .period {
+        font-size: 0.9rem;
+    }
+    
+    .tier-features {
+        font-size: 0.85rem;
+    }
+    
+    .popular-badge {
+        font-size: 0.7rem;
+        padding: 4px 15px;
+    }
+    
+    /* 小画面向けベネフィットカード最適化 */
+    .benefit-card {
+        padding: 1.2rem;
+        margin: 0 5px;
+    }
+    
+    .benefit-image {
+        height: 180px;
+    }
+    
+    .benefit-card h3 {
+        font-size: 1rem;
+    }
+    
+    .benefit-card p {
+        font-size: 0.85rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        padding: 0 10px;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        padding: 0 10px;
     }
 }

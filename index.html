@@ -1,24 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exclusive Content - Join My Patreon</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="AI生成によるインド女性の美しいアート作品。独占的なコンテンツとプライベートなアクセスをPatreonで体験してください。">
+    <meta name="keywords" content="AI art, Indian beauty, exclusive content, Patreon, digital art">
+    <meta property="og:title" content="Exclusive AI Art Collection - Patreon">
+    <meta property="og:description" content="美しいAI生成アート作品の独占コレクション">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    
+    <title>Exclusive AI Art Collection - Join My Patreon</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" as="style">
+    
+    <link rel="stylesheet" href="styles-new.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" role="banner">
         <div class="hero-content">
-            <div class="hero-image">
-                <img src="2025-04-12/00005-1269867993.png" alt="Portrait" class="profile-image">
-                <div class="video-overlay" id="videoOverlay">
-                    <div class="play-button" onclick="playVideo()">▶</div>
-                </div>
+            <div class="hero-video">
+                <video 
+                    autoplay 
+                    loop 
+                    muted 
+                    playsinline 
+                    class="hero-video-element" 
+                    preload="metadata" 
+                    poster="2025-04-12/00005-1269867993.png"
+                    aria-label="Hero video showcasing AI art collection">
+                    <source src="LP‗ヒーロー動画.mp4" type="video/mp4">
+                    <img src="2025-04-12/00005-1269867993.png" alt="Beautiful AI-generated portrait of Indian woman" class="profile-image">
+                </video>
             </div>
             <div class="hero-text">
-                <div class="hero-badge">🎨 Exclusive AI Art Collection</div>
+                <div class="hero-badge" role="banner">🎨 Exclusive AI Art Collection</div>
+                <div class="free-trial-badge" role="banner">🎁 7-Day Free Trial</div>
                 <h1 class="hero-title">"I want to preserve Indian beauty as art."</h1>
                 <p class="hero-subtitle">AI-generated ethereal women. This is not just photography.</p>
                 <div class="hero-emotion">
@@ -26,13 +50,30 @@
                     <p>In those quiet gazes looking back at you, you felt something like a <strong>"soul"</strong>.</p>
                 </div>
                 <p class="hero-revelation">If you felt that way, then perhaps this artwork is <strong>no longer just an image</strong> to you.</p>
-                <a href="https://www.patreon.com/c/MesmerizingIndianAILookbook" class="cta-button primary pulse">Enter This World</a>
+                <div class="hero-cta-group">
+                    <a href="https://www.patreon.com/c/MesmerizingIndianAILookbook" 
+                       class="cta-button primary pulse" 
+                       rel="noopener noreferrer" 
+                       target="_blank"
+                       data-action="track-cta"
+                       aria-label="Start 7-day free trial on Patreon">🎁 Start Free Trial</a>
+                    <a href="#pricing" 
+                       class="cta-button secondary outline"
+                       data-action="track-cta"
+                       aria-label="View pricing plans">View Pricing</a>
+                </div>
+                <p class="hero-guarantee">✅ Cancel Anytime ・ ✅ No Credit Card Required</p>
+                <div class="hero-stats">
+                    <div class="stat-item">👥 1,247+ Members</div>
+                    <div class="stat-item">⭐ 4.9/5.0 Rating</div>
+                    <div class="stat-item">🔒 100% Private</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Worldview Section -->
-    <section class="worldview">
+    <section class="worldview section">
         <div class="container">
             <div class="worldview-content">
                 <h2 class="section-title">What We Create</h2>
@@ -56,23 +97,31 @@
                         <p>These works <strong>cannot be shared on social media</strong>.</p>
                         <p>That's why here, I wanted to deliver them <strong class="highlight">to you alone</strong>.</p>
                     </div>
+                    <div class="content-warning">
+                        <div class="warning-header">
+                            <span class="warning-icon">🔞</span>
+                            <h3>Important Notice</h3>
+                        </div>
+                        <div class="warning-content">
+                            <p><strong>18+ Content Only:</strong> This content includes artistic nude works. Access is restricted to individuals 18 years of age and older.</p>
+                            <p><strong>Complete Privacy:</strong> Your subscription information and access history are fully protected and will never be shared with third parties.</p>
+                            <p><strong>Secure Payment:</strong> All payments are processed securely through Patreon's encrypted payment system.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Benefits Section -->
-    <section class="benefits">
+    <section class="benefits section">
         <div class="container">
             <h2 class="section-title">Discover What Makes Hearts Race</h2>
             <p class="section-subtitle">Every piece of content is crafted to ignite your imagination and celebrate the art of beauty</p>
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-image">
-                        <img src="2025-04-14/00010-2009244279.png" alt="Exclusive Photos">
-                        <div class="content-overlay">
-                            <span class="content-type">Exclusive Photos</span>
-                        </div>
+                        <img src="2025-04-14/00010-2009244279.png" alt="Exclusive AI-generated portrait showcasing artistic beauty" loading="lazy">
                     </div>
                     <h3>🔥 Stunning AI Portraits</h3>
                     <p>Breathtaking AI-generated images that push the boundaries of digital art. Each portrait is a masterpiece of sensuality, elegance, and artistic vision that you won't find anywhere else.</p>
@@ -80,10 +129,7 @@
                 
                 <div class="benefit-card">
                     <div class="benefit-image">
-                        <img src="2025-04-14/00025-2009244294.png" alt="Personal Essays">
-                        <div class="content-overlay">
-                            <span class="content-type">Behind-the-Scenes</span>
-                        </div>
+                        <img src="2025-04-14/00025-2009244294.png" alt="Creative process illustration for AI art" loading="lazy">
                     </div>
                     <h3>💭 Creative Process Stories</h3>
                     <p>Dive deep into my creative process, inspirations, and personal journey in the world of AI art. Get exclusive insights into how each piece comes to life and the stories behind them.</p>
@@ -91,10 +137,7 @@
                 
                 <div class="benefit-card">
                     <div class="benefit-image">
-                        <img src="2025-04-14/00040-3700734044.png" alt="Exclusive Videos">
-                        <div class="content-overlay">
-                            <span class="content-type">Exclusive Videos</span>
-                        </div>
+                        <img src="2025-04-14/00040-3700734044.png" alt="Behind-the-scenes content creation" loading="lazy">
                     </div>
                     <h3>🎬 Exclusive Video Content</h3>
                     <p>Watch the magic happen! Time-lapse creation videos, tutorials, and personal vlogs where I share my artistic journey, techniques, and the passion behind every creation.</p>
@@ -104,7 +147,7 @@
     </section>
 
     <!-- Pricing Tiers -->
-    <section class="pricing">
+    <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="section-title">Choose Your Experience</h2>
             <p class="pricing-subtitle">Compare and select the perfect tier that matches your appreciation for art</p>
@@ -216,7 +259,7 @@
                     </blockquote>
                 </div>
                 <div class="story-image">
-                    <img src="2025-04-14/00055-14614703.png" alt="Personal moment">
+                    <img src="2025-04-14/00055-14614703.png" alt="Intimate artistic portrait" loading="lazy">
                 </div>
             </div>
         </div>
@@ -370,12 +413,12 @@
         <div class="modal-content">
             <span class="close" onclick="closeVideo()">&times;</span>
             <video id="heroVideo" controls>
-                <source src="hero-video.mp4" type="video/mp4">
+                <source src="LP‗ヒーロー動画.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
